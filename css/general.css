@@ -58,6 +58,7 @@ SPACING SYSTEM (px)
 html {
   font-size: 62.5%;
   /* 10 px / 16 px = 0.625 = 62.5% */
+  overflow-x: hidden;
 }
 
 body {
@@ -65,6 +66,8 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555555;
+
+  overflow-x: hidden;
 }
 
 /* ******************* */
@@ -121,6 +124,7 @@ body {
   font-weight: 600;
   font-family: inherit;
   text-decoration: none;
+  text-align: center;
 
   border: none;
   border-radius: 9px;
@@ -188,6 +192,29 @@ body {
   border-bottom: 1px solid transparent;
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  list-style: none;
+  line-height: 1.2;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  font-size: 1.8rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
+
 *:focus {
   outline: none;
   /* outline: 4px dotted #fdf2e9;
@@ -231,10 +258,6 @@ body {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
-}
-
-.grid--5-cols {
-  grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center-v {
