@@ -2,7 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/favicon_small.png" />
+    <link rel="apple-touch-icon" href="img/apple_touch_icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,7 +31,7 @@
     ></script>
     <script defer src="js/script.js"></script>
 
-    <title>Omifood</title>
+    <title>Omnifood &mdash; Never cook again!</title>
   </head>
   <body>
     <header class="header">
@@ -41,7 +49,7 @@
           <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
         </ul>
       </nav>
-      <button class="button-mobile-nav">
+      <button class="button-mobile-nav" aria-label="open menu button">
         <ion-icon class="icon--mobile-nav" name="menu-outline"></ion-icon>
         <ion-icon class="icon--mobile-nav" name="close-outline"></ion-icon>
       </button>
@@ -99,11 +107,15 @@
             </div>
           </div>
           <div class="hero-img-box">
-            <img
-              class="hero-img"
-              src="img/hero.png"
-              alt="Woman enjoing food, meals in storage container and bowls on a table"
-            />
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-compressed.png" type="image/png" />
+              <img
+                class="hero-img"
+                src="img/hero-compressed.png"
+                alt="Woman enjoing food, meals in storage container and bowls on a table"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -655,23 +667,39 @@
           </div>
           <ul class="social-links">
             <li>
-              <a class="footer-link" href="#">
+              <a
+                class="footer-link"
+                href="#"
+                aria-label="link to Instagram page"
+              >
                 <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
               </a>
             </li>
             <li>
-              <a class="footer-link" href="#">
+              <a
+                class="footer-link"
+                href="#"
+                aria-label="link to Facebook page"
+              >
                 <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
               </a>
             </li>
             <li>
               <a class="footer-link" href="#">
-                <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
+                <ion-icon
+                  class="social-icon"
+                  name="logo-twitter"
+                  aria-label="link to twitter page"
+                ></ion-icon>
               </a>
             </li>
             <li>
               <a class="footer-link" href="#">
-                <ion-icon class="social-icon" name="logo-github"></ion-icon>
+                <ion-icon
+                  class="social-icon"
+                  name="logo-github"
+                  aria-label="link to GitHub page"
+                ></ion-icon>
               </a>
             </li>
           </ul>
